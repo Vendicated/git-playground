@@ -1,0 +1,21 @@
+{
+  "name": "git-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "echo \"Initialising git hooks...\" && git config --local core.hooksPath .githooks/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vendicated/git-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vendicated/git-playground/issues"
+  },
+  "homepage": "https://github.com/Vendicated/git-playground#readme"
+}
