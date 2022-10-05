@@ -5,7 +5,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Install modules
+            - name: Install pnpm
+              run: npm i -g pnpm
+            - name: Install deps
               run: pnpm i
             - name: Run ESLint
               run: pnpm run lint
