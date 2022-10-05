@@ -6,7 +6,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: Install pnpm
-              run: npm i -g pnpm
+              run: node --version
             - name: Install deps
               run: pnpm i
             - name: Run ESLint
