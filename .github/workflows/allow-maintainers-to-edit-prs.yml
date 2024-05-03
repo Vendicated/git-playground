@@ -1,3 +1,4 @@
+name: check pr maintainer perms
 on:
   pull_request:
     types:
@@ -6,5 +7,14 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    if: ${{ github.event.pull_request.maintainer_can_modify == false }}
     steps:
-      - run: echo ${{ github.event }}
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "It works!"
+            })
