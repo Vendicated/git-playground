@@ -7,7 +7,7 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.maintainer_can_modify == false }}
+    if: ${{ !github.event.pull_request.maintainer_can_modify }}
     steps:
       - uses: actions/github-script@v6
         with:
