@@ -1,0 +1,10 @@
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event }}
